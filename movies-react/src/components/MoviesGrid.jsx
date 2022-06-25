@@ -1,11 +1,12 @@
 import React from "react";
 import MoviesDB from "../db/movies.json"
 import MovieCard from "./MovieCard";
+import styles from "../modules_css/MoviesGrid.module.css"
 
 const MoviesGrid=()=>{
-    console.log(MoviesDB);
+    console.log(styles);
     return(
-        <ul>
+        <ul className={styles.moviesGrid}>
             {MoviesDB.map((movie)=>{
 
                 return <MovieCard key={movie.id} movie={movie} />/* </MovieCard><li key={movie.id}>{movie.title}</li> */
